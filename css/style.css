@@ -1,0 +1,248 @@
+@charset "UTF-8";
+/* 共通部分 */
+html {
+  font-size: 1rem;
+}
+
+html body {
+  font-family: sans-serif, "メイリオ", "Meiryo";
+  line-height: 1.7;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+html body a {
+  text-decoration: none;
+  /*下線引かない*/
+  display: block;
+  /*ブロック要素に*/
+}
+
+html body img {
+  max-width: 100%;
+  /*画像がはみ出さないように*/
+}
+
+html body .top_screen_smf {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  /* 一番手前に */
+}
+
+@media (min-width: 1025px) {
+  html body .top_screen_smf {
+    display: none;
+  }
+}
+
+html body .top_screen_smf .screen_smf {
+  width: 100vw;
+  height: 100vh;
+}
+
+html body .top_screen_smf #top_img_smf {
+  width: 50vw;
+  height: 10vw;
+  position: fixed;
+  top: 70vh;
+  left: 25vw;
+  z-index: 9999;
+}
+
+html body .top_screen_smf #top_img_smf .lookbook_btn {
+  width: 50vw;
+  height: 10vw;
+}
+
+html body .top_screen_pc {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9998;
+  /* 一番手前に */
+}
+
+html body .top_screen_pc .screen_pc {
+  width: 100vw;
+  height: 100vh;
+}
+
+html body .top_screen_pc #top_img_pc {
+  width: 18vw;
+  height: 4vw;
+  position: fixed;
+  top: 83vh;
+  left: 41vw;
+  z-index: 9999;
+}
+
+html body .top_screen_pc #top_img_pc .lookbook_btn {
+  width: 18vw;
+  height: 4vw;
+}
+
+@media (min-width: 1025px) {
+  html body .top_screen_pc {
+    display: block;
+  }
+}
+
+html body header {
+  width: 20vw;
+  height: 100vh;
+  background-image: url(../image/sidebar_smf.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@media (min-width: 1025px) {
+  html body header {
+    overflow: scroll;
+    padding: 6vh 5.5vw 10vh 5.5vw;
+    width: 30vw;
+    background-image: url(../image/sidebar_pc.png);
+    background-size: 100% 100vh;
+  }
+}
+
+html body header ul {
+  padding-top: 0;
+  width: 20vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 1025px) {
+  html body header ul {
+    width: 19vw;
+    height: 150vh;
+    justify-content: space-between;
+  }
+}
+
+html body header ul li .secList {
+  padding: 0;
+  width: 12vw;
+  height: 12vw;
+}
+
+@media (min-width: 1025px) {
+  html body header ul li .secList {
+    width: 8vw;
+    height: 8vw;
+  }
+}
+
+html body header ul li .secList img {
+  width: 12vw;
+  height: 12vw;
+}
+
+@media (min-width: 1025px) {
+  html body header ul li .secList img {
+    width: 8vw;
+    height: 8vw;
+  }
+}
+
+html body header ul li .active {
+  opacity: 0.5;
+}
+
+html body header .black-list {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+html body main {
+  width: 80vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 20vw;
+  /*
+      .btn {
+        padding: 8px 24px;
+        color: white;
+        opacity: 0.8;
+        border-radius: 4px;
+        background-color: #f778b8;
+        cursor: pointer;
+        box-shadow: 0 5px #e04893;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        &:active {
+          position: relative;
+          top: 7px;
+          box-shadow: none;
+        }
+    
+      } //btn
+      へこむボタン*/
+}
+
+@media (min-width: 1025px) {
+  html body main {
+    width: 70vw;
+    left: 30vw;
+  }
+}
+
+html body main .section {
+  /* widthやheightの値は要カスタマイズ */
+}
+
+html body main .section .model-viewer {
+  width: 85vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 1025px) {
+  html body main .section .model-viewer {
+    width: 70vw;
+  }
+}
+
+html body main .section ​ .model-viewer-btn {
+  position: absolute;
+  right: 16px;
+  bottom: 10px;
+  height: 26px;
+  font-weight: bold;
+  line-height: 26px;
+  color: white;
+  background-color: #6b6868;
+  border: none;
+}
+
+html body main .section .model {
+  background-image: url(../image/bg1_smf.png);
+}
+
+@media (min-width: 1025px) {
+  html body main .section .model {
+    background-image: url(../image/bg1_pc.png);
+  }
+}
