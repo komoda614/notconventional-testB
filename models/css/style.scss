@@ -309,15 +309,15 @@ html {
           @include btn10-pc;
         }
       }
-      .instagram {
-        position: fixed;
-        top: 10vw;
-        right: 0;
-        z-index: 98;
-        @include screen-pc {
-          top: 5vw;
-        }
-      }
+      // .instagram {
+      //   position: fixed;
+      //   top: 10vw;
+      //   right: 0;
+      //   z-index: 98;
+      //   @include screen-pc {
+      //     top: 5vw;
+      //   }
+      // }
       .line {
         position: fixed;
         bottom: 5vw;
