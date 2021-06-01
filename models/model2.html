@@ -12,38 +12,39 @@
 
 <body>
     <header>
-
-        <ul>
-            <li class="et_pb_module" id="1"><a href="model1.html#1" class="secList secList1" ><img src="image/circle1.png" alt=""></a></li>
-
-            <li class="et_pb_module" id="2"><a href="#circle" class="secList secList2 active" ><img src="image/circle2.png" alt=""></a></li>
-
-            <li class="et_pb_module" id="3"><a href="model3.html#3" class="secList secList3" ><img src="image/circle3.png" alt=""></a></li>
-
-            <li class="et_pb_module" id="4"><a href="model4.html#4" class="secList secList4" ><img src="image/circle4.png" alt=""></a></li>
-
-            <li class="et_pb_module" id="5"><a href="model5.html#5" class="secList secList5" ><img src="image/circle5.png" alt=""></a></li>
-
-            <li class="et_pb_module" id="6"><a href="model6.html#6" class="secList secList6" ><img src="image/circle6.png" alt=""></a></li>
-
-            <li class="et_pb_module" id="7"><a href="model7.html#7" class="secList secList7" ><img src="image/circle7.png" alt=""></a></li>
-
-            <li class="et_pb_module" id="8"><a href="model8.html#8" class="secList secList8" ><img src="image/circle8.png" alt=""></a></li>
-
-            <li class="et_pb_module" id="9"><a href="model9.html#9" class="secList secList9" ><img src="image/circle9.png" alt=""></a></li>
-
-            <li class="et_pb_module" id="10"><a href="model10.html#10" class="secList secList10" ><img src="image/circle10.png" alt=""></a></li>
-        </ul>
-
     </header>
+    <div class="header">
+        <img src="image/not-logo.png" alt="" class="header_left">
+        <div class="header_right">
+            <img src="image/cart.png" alt="" class="cart">
+            <img src="image/header_right.png" alt="" class="cart_pc">
+        </div>
+    </div>
+
+
 
     <main>
-        <div id="circle" class="section first-section">
+        <a href="model1.html" class="secList secList1" ><img src="image/hexagon1.png" alt=""></a>
+        <a href="#hexagon" class="secList secList2" ><img src="image/hexagon11.png" alt=""></a>
+        <a href="model3.html" class="secList secList3" ><img src="image/hexagon3.png" alt=""></a>
+        <a href="model4.html" class="secList secList4" ><img src="image/hexagon4.png" alt=""></a>
+        <a href="model5.html" class="secList secList5" ><img src="image/hexagon5.png" alt=""></a>
+        <a href="model6.html" class="secList secList6" ><img src="image/hexagon6.png" alt=""></a>
+        <a href="model7.html" class="secList secList7" ><img src="image/hexagon7.png" alt=""></a>
+        <a href="model8.html" class="secList secList8" ><img src="image/hexagon8.png" alt=""></a>
+        <a href="model9.html" class="secList secList9" ><img src="image/hexagon9.png" alt=""></a>
+        <a href="model10.html" class="secList secList10" ><img src="image/hexagon10.png" alt=""></a>
+        <!-- <a href="" class="top_link"><img src="image/frontispiece_pc.png" alt=""></a> -->
+        <img src="image/instagram_icon.png" alt="" class="instagram">
+        <img src="image/line_icon.png" alt="" class="line">
+
+
+        <div id="hexagon" class="section first-section">
             <!-- slick.jsアイテム-->
             <!-- ios-srcとsrcのパスは要変更-->
             <model-viewer
             id="model-viewer"
-            class="model-viewer model2"
+            class="model-viewer model1"
             ios-src="model/nc_setup_2.usdz"
             src="model/nc_setup_2.glb"
             preload="preload"
@@ -53,18 +54,20 @@
             ar-modes="webxr scene-viewer quick-look fallback"
             ar-scale="fixed"
             alt="A 3D model of notconventional"
-            camera-orbit = "0deg 85deg 100%"
+            camera-orbit = "0deg 105deg 100%"
             >
+    
+    
                 <button class="model-viewer-btn" slot="ar-button">
                     <!-- クリックしてARを表示 -->
                 </button>
             </model-viewer>
-        </div>
 
+        </div>
 
         <!-- へこむボタン
         <div class="btn">ボタン</div>
-         -->
+        -->
     </main>
 
     <footer>
@@ -76,9 +79,6 @@
         src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
     ></script>
     
-
-    
-
 
 
 </body>
