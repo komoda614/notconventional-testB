@@ -11,51 +11,51 @@
 </head>
 
 <body>
-    <div class="top_screen_smf" id="top_screen_smf">
-        <img src="image/frontispiece_smf.png" alt="" class="screen_smf">
-        <a href="#circle1" id="top_img_smf" class="show"><img src="image/lookbook_btn.png" alt="" class="lookbook_btn"></a>
+    <a href="#hexagon1" id="top_img" class="show">
+        <img src="image/frontispiece_smf.png" class="frontispiece frontispiece_smf" alt="">
+        <img src="image/frontispiece_pc.png" class="frontispiece frontispiece_pc" alt="">
+        <img src="image/hexagon1w.png" class="hexagon1w hexagon" alt="">
+        <img src="image/hexagon2w.png" class="hexagon2w hexagon" alt="">
+        <img src="image/hexagon3w.png" class="hexagon3w hexagon" alt="">
+        <img src="image/hexagon4w.png" class="hexagon4w hexagon" alt="">
+        <img src="image/hexagon5w.png" class="hexagon5w hexagon" alt="">
+        <img src="image/hexagon6w.png" class="hexagon6w hexagon" alt="">
+        <img src="image/hexagon7w.png" class="hexagon7w hexagon" alt="">
+        <img src="image/hexagon8w.png" class="hexagon8w hexagon" alt="">
+        <img src="image/hexagon9w.png" class="hexagon9w hexagon" alt="">
+        <img src="image/hexagon10w.png" class="hexagon10w hexagon" alt="">
+        
+    </a>
+
+    <div class="header">
+        <img src="image/not-logo.png" alt="" class="header_left">
+        <div class="header_right">
+            <img src="image/cart.png" alt="" class="cart">
+            <img src="image/header_right.png" alt="" class="cart_pc">
+        </div>
     </div>
-    <div class="top_screen_pc" id="top_screen_pc">
-        <img src="image/frontispiece_pc.png" alt="" class="screen_pc">
-        <a href="#circle1" id="top_img_pc" class="show"><img src="image/lookbook_btn.png" alt="" class="lookbook_btn"></a>
-    </div>
-
-    <!-- <a href="#circle1" id="top_img_smf" class="show"><img src="image/frontispiece_smf.png" alt=""></a>
-    <a href="#circle1" id="top_img" class="show"><img src="image/frontispiece_pc.png" alt=""></a> -->
-
-    <header>
-
-        <ul>
-            <li class="et_pb_module"><a href="#circle" class="secList secList1 active" ><img src="image/circle1.png" alt=""></a></li>
-
-            <li class="et_pb_module"><a href="models/model2.html" class="secList secList2" ><img src="image/circle2.png" alt=""></a></li>
-
-            <li class="et_pb_module"><a href="models/model3.html" class="secList secList3" ><img src="image/circle3.png" alt=""></a></li>
-
-            <li class="et_pb_module"><a href="models/model4.html" class="secList secList4" ><img src="image/circle4.png" alt=""></a></li>
-
-            <li class="et_pb_module"><a href="models/model5.html" class="secList secList5" ><img src="image/circle5.png" alt=""></a></li>
-
-            <li class="et_pb_module"><a href="models/model6.html" class="secList secList6" ><img src="image/circle6.png" alt=""></a></li>
-
-            <li class="et_pb_module"><a href="models/model7.html" class="secList secList7" ><img src="image/circle7.png" alt=""></a></li>
-
-            <li class="et_pb_module"><a href="models/model8.html" class="secList secList8" ><img src="image/circle8.png" alt=""></a></li>
-
-            <li class="et_pb_module"><a href="models/model9.html" class="secList secList9" ><img src="image/circle9.png" alt=""></a></li>
-
-            <li class="et_pb_module"><a href="models/model10.html" class="secList secList10" ><img src="image/circle10.png" alt=""></a></li>
-        </ul>
-
-    </header>
 
     <main>
-        <div id="circle" class="section first-section">
+        <a href="#hexagon" class="secList secList1 active" ><img src="image/hexagon1.png" alt=""></a>
+        <a href="models/model2.html" class="secList secList2" ><img src="image/hexagon2.png" alt=""></a>
+        <a href="models/model3.html" class="secList secList3" ><img src="image/hexagon3.png" alt=""></a>
+        <a href="models/model4.html" class="secList secList4" ><img src="image/hexagon4.png" alt=""></a>
+        <a href="models/model5.html" class="secList secList5" ><img src="image/hexagon5.png" alt=""></a>
+        <a href="models/model6.html" class="secList secList6" ><img src="image/hexagon6.png" alt=""></a>
+        <a href="models/model7.html" class="secList secList7" ><img src="image/hexagon7.png" alt=""></a>
+        <a href="models/model8.html" class="secList secList8" ><img src="image/hexagon8.png" alt=""></a>
+        <a href="models/model9.html" class="secList secList9" ><img src="image/hexagon9.png" alt=""></a>
+        <a href="models/model10.html" class="secList secList10" ><img src="image/hexagon10.png" alt=""></a>
+        <!-- <a href="" class="top_link"><img src="image/frontispiece_pc.png" alt=""></a> -->
+        <img src="image/instagram_icon.png" alt="" class="instagram">
+        <img src="image/line_icon.png" alt="" class="line">
+
+        <div id="hexagon" class="section">
             <!-- slick.jsアイテム-->
             <!-- ios-srcとsrcのパスは要変更-->
             <model-viewer
             id="model-viewer"
-            class="model-viewer model"
+            class="model-viewer model1"
             ios-src="model/nc_setup_2.usdz"
             src="model/nc_setup_2.glb"
             preload="preload"
@@ -65,13 +65,18 @@
             ar-modes="webxr scene-viewer quick-look fallback"
             ar-scale="fixed"
             alt="A 3D model of notconventional"
-            camera-orbit = "0deg 85deg 100%"
+            camera-orbit = "0deg 105deg 100%"
             >
+    
+    
                 <button class="model-viewer-btn" slot="ar-button">
                     <!-- クリックしてARを表示 -->
                 </button>
             </model-viewer>
+
+
         </div>
+
 
 
         <!-- へこむボタン
@@ -95,23 +100,21 @@
             $('#top_img_smf').click(function() {
 
                 // 素早くフェードアウトさせる
-                $('#top_screen_smf').fadeOut('slow');
+                $('#top_img_smf').fadeOut('slow');
             });
         });
     </script>
     <script>
         $(function() {
             // ボタンをクリックしたら発動
-            $('#top_img_pc').click(function() {
+            $('#top_img').click(function() {
 
                 // 素早くフェードアウトさせる
-                $('#top_screen_pc').fadeOut('slow');
+                $('#top_img').fadeOut('slow');
             });
         });
     </script>
     
-
-
 
 </body>
 </html>

@@ -16,6 +16,157 @@
   }
 }
 
+@mixin btnsize-smf {
+  width: 14vw;
+  height: 12vw;
+}
+@mixin btn1-smf {
+  position: fixed;
+  top: 14vw;
+  bottom: auto;
+  right: auto;
+  left: 8vw;
+}
+@mixin btn2-smf {
+  position: fixed;
+  top: 28vw;
+  bottom: auto;
+  right: auto;
+  left: 8vw;
+}
+@mixin btn3-smf {
+  position: fixed;
+  top: 42vw;
+  bottom: auto;
+  right: auto;
+  left: 8vw;
+}
+@mixin btn4-smf {
+  position: fixed;
+  top: 22.5vw;
+  bottom: auto;
+  right: auto;
+  left: 23vw;
+}
+@mixin btn5-smf {
+  position: fixed;
+  top: 14vw;
+  bottom: auto;
+  left: 37.5vw;
+  right: auto;
+}
+@mixin btn6-smf {
+  position: fixed;
+  top: auto;
+  bottom: 28vw;
+  right: 16vw;
+  left: auto;
+}
+@mixin btn7-smf {
+  position: fixed;
+  top: auto;
+  bottom: 14vw;
+  right: 16vw;
+  left: auto;
+}
+@mixin btn8-smf {
+  position: fixed;
+  top: auto;
+  bottom: 5vw;
+  right: 30vw;
+  left: auto;
+}
+@mixin btn9-smf {
+  position: fixed;
+  top: auto;
+  bottom: 12vw;
+  right: 43vw;
+  left: auto;
+}
+@mixin btn10-smf {
+  position: fixed;
+  top: auto;
+  bottom: 5vw;
+  right: 56vw;
+  left: auto;
+}
+
+@mixin btnsize-pc {
+  width: 8vw;
+  height: 6.7vw;
+}
+
+@mixin btn1-pc {
+  position: fixed;
+  top: 8vw;
+  bottom: auto;
+  right: auto;
+  left: 6vw;
+}
+@mixin btn2-pc {
+  position: fixed;
+  top: 15.5vw;
+  bottom: auto;
+  right: auto;
+  left: 6vw;
+}
+@mixin btn3-pc {
+  position: fixed;
+  top: 23vw;
+  bottom: auto;
+  right: auto;
+  left: 6vw;
+}
+@mixin btn4-pc {
+  position: fixed;
+  top: 11.7vw;
+  bottom: auto;
+  right: auto;
+  left: 13vw;
+}
+@mixin btn5-pc {
+  position: fixed;
+  top: 8vw;
+  bottom: auto;
+  right: 19vw;
+  left: auto;
+}
+@mixin btn6-pc {
+  position: fixed;
+  top: auto;
+  bottom: 15.5vw;
+  right: 6vw;
+  left: auto;
+}
+@mixin btn7-pc {
+  position: fixed;
+  top: auto;
+  bottom: 8vw;
+  right: 6vw;
+  left: auto;
+}
+@mixin btn8-pc {
+  position: fixed;
+  top: auto;
+  bottom: 3.5vw;
+  right: 13vw;
+  left: auto;
+}
+@mixin btn9-pc {
+  position: fixed;
+  top: 12vw;
+  bottom: auto;
+  right: 12.5vw;
+  left: auto;
+}
+@mixin btn10-pc {
+  position: fixed;
+  top: 8vw;
+  bottom: auto;
+  right: 6vw;
+  left: auto;
+}
+
 /* 共通部分 */
 html {
   font-size: 1rem;
@@ -35,100 +186,166 @@ html {
       max-width: 100%; /*画像がはみ出さないように*/
     }
 
-    header {
-      width: 20vw;
-      height: 100vh;
-      background-image: url(../image/sidebar_smf.png);
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
+    .header {
+      height: 10vw;
+      width: 100vw;
+      background-color: rgba($color: #fff, $alpha: 0.7);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
       position: fixed;
       top: 0;
       left: 0;
       @include screen-pc {
-        overflow: scroll;
-        padding: 6vh 5.5vw 10vh 5.5vw;
-        width: 30vw;
-        background-image: url(../image/sidebar_pc.png);
-        background-size: 100% 100vh;
-        // background-attachment: fixed;
+        height: 5vw;
       }
-      ul {
-        padding-top: 0;
-        width: 20vw;
-        height: 100vh;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
+      .header_left {
+        height: 10vw;
         @include screen-pc {
-          width: 19vw;
-          height: 150vh;
-          justify-content: space-between;
+          height: 5vw;
         }
-        li {
-          .secList {
-            padding: 0;
-            width: 12vw;
-            height: 12vw;
-            @include screen-pc {
-              width: 8vw;
-              height: 8vw;
-            }
-
-            img {
-              width: 12vw;
-              height: 12vw;
-              @include screen-pc {
-                width: 8vw;
-                height: 8vw;
-              }
-            }
-          } //secList
-          .active {
-            opacity: 0.5;
-          }
-        } //li
-      } //ul
-      .black-list {
-        position: fixed;
-        top: 0;
-        left: 0;
       }
-    } //header
+      .header_right {
+        display: flex;
+        .cart {
+          height: 8vw;
+          @include screen-pc {
+            display: none;
+          }
+        }
+        .cart_pc {
+          display: none;
+          @include screen-pc {
+            display: block;
+            height: 4vw;
+          }
+        }
+      }
+    }
 
     main {
-      width: 80vw;
-      height: 100vh;
+      width: 100vw;
+      height: calc(100vh - 10vw);
       position: fixed;
-      top: 0;
-      left: 20vw;
+      top: 10vw;
+      left: 0;
       @include screen-pc {
-        width: 70vw;
-        left: 30vw;
+        height: calc(100vh - 5vw);
+        top: 5vw;
       }
+
+      //ここからリスト---------------------------------------------------------------------
+      .secList {
+        //a
+        @include btnsize-smf;
+        z-index: 9000;
+        @include screen-pc {
+          @include btnsize-pc;
+        }
+        img {
+          @include btnsize-smf;
+          @include screen-pc {
+            @include btnsize-pc;
+          }
+        }
+      } //secList
+      .secList1 {
+        @include btn1-smf;
+        @include screen-pc {
+          @include btn1-pc;
+        }
+      }
+      .secList2 {
+        @include btn2-smf;
+        @include screen-pc {
+          @include btn2-pc;
+        }
+      }
+      .secList3 {
+        @include btn3-smf;
+        @include screen-pc {
+          @include btn3-pc;
+        }
+      }
+      .secList4 {
+        @include btn4-smf;
+        @include screen-pc {
+          @include btn4-pc;
+        }
+      }
+      .secList5 {
+        @include btn5-smf;
+        @include screen-pc {
+          @include btn5-pc;
+        }
+      }
+      .secList6 {
+        @include btn6-smf;
+        @include screen-pc {
+          @include btn6-pc;
+        }
+      }
+      .secList7 {
+        @include btn7-smf;
+        @include screen-pc {
+          @include btn7-pc;
+        }
+      }
+      .secList8 {
+        @include btn8-smf;
+        @include screen-pc {
+          @include btn8-pc;
+        }
+      }
+      .secList9 {
+        @include btn9-smf;
+        @include screen-pc {
+          @include btn9-pc;
+        }
+      }
+      .secList10 {
+        @include btn10-smf;
+        @include screen-pc {
+          @include btn10-pc;
+        }
+      }
+      .instagram {
+        position: fixed;
+        top: 10vw;
+        right: 0;
+        z-index: 98;
+        @include screen-pc {
+          top: 5vw;
+        }
+      }
+      .line {
+        position: fixed;
+        bottom: 5vw;
+        right: 1vw;
+        z-index: 98;
+      }
+
+      //ここまでリスト--------------------------------------------------
+
       .section {
         /* widthやheightの値は要カスタマイズ */
         .model-viewer {
-          width: 85vw;
+          width: 100vw;
           height: 100vh;
           background-repeat: no-repeat;
           background-size: cover;
-          @include screen-pc {
-            width: 70vw;
+          ​ .model-viewer-btn {
+            position: absolute;
+            right: 16px;
+            bottom: 10px;
+            height: 26px;
+            font-weight: bold;
+            line-height: 26px;
+            color: white;
+            background-color: #6b6868;
+            border: none;
           }
-        }
-        ​ .model-viewer-btn {
-          position: absolute;
-          right: 16px;
-          bottom: 10px;
-          height: 26px;
-          font-weight: bold;
-          line-height: 26px;
-          color: white;
-          background-color: #6b6868;
-          border: none;
-        }
-
+        } //model-viewer
         .model1 {
           background-image: url(../image/bg1_smf.png);
           @include screen-pc {
@@ -191,6 +408,79 @@ html {
         }
       } //section
 
+      // .secList {
+      //   //a
+      //   width: 20vw;
+      //   height: 20vw;
+      //   z-index: 9000;
+      //   @include screen-pc {
+      //     width: 12vw;
+      //     height: 12vw;
+      //   }
+      //   img {
+      //     width: 20vw;
+      //     height: 20vw;
+      //     @include screen-pc {
+      //       width: 12vw;
+      //       height: 12vw;
+      //     }
+      //   }
+      // } //secList
+      // .active {
+      //   opacity: 0.5;
+      // }
+
+      // #hexagon1 {
+      //   position: fixed;
+      //   top: 2vw;
+      //   left: 2vw;
+      // }
+      // #hexagon2 {
+      //   position: fixed;
+      //   top: 24vw;
+      //   left: 24vw;
+      // }
+      // #hexagon3 {
+      //   position: fixed;
+      //   top: 46vw;
+      //   left: 46vw;
+      // }
+      // #hexagon4 {
+      //   position: fixed;
+      //   top: 12vw;
+      //   left: 19vw;
+      // }
+      // #hexagon5 {
+      //   position: fixed;
+      //   top: 2vw;
+      //   left: 36vw;
+      // }
+      // #hexagon6 {
+      //   position: fixed;
+      //   bottom: 36vw;
+      //   right: 2vw;
+      // }
+      // #hexagon7 {
+      //   position: fixed;
+      //   bottom: 24vw;
+      //   right: 2vw;
+      // }
+      // #hexagon8 {
+      //   position: fixed;
+      //   bottom: 2vw;
+      //   right: 19vw;
+      // }
+      // #hexagon9 {
+      //   position: fixed;
+      //   bottom: 14vw;
+      //   right: 36vw;
+      // }
+      // #hexagon10 {
+      //   position: fixed;
+      //   bottom: 2vw;
+      //   right: 53vw;
+      // }
+
       /*
       .btn {
         padding: 8px 24px;
@@ -212,7 +502,7 @@ html {
         }
     
       } //btn
-      へこむボタン*/
+     へこむボタン*/
     } //main
   } //body
 } //html

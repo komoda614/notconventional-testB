@@ -25,86 +25,65 @@ html body img {
   /*画像がはみ出さないように*/
 }
 
-html body header {
-  width: 20vw;
-  height: 100vh;
-  background-image: url(../image/sidebar_smf.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-@media (min-width: 1025px) {
-  html body header {
-    overflow: scroll;
-    padding: 6vh 5.5vw 10vh 5.5vw;
-    width: 30vw;
-    background-image: url(../image/sidebar_pc.png);
-    background-size: 100% 100vh;
-  }
-}
-
-html body header ul {
-  padding-top: 0;
-  width: 20vw;
-  height: 100vh;
+html body .header {
+  height: 10vw;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.7);
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-@media (min-width: 1025px) {
-  html body header ul {
-    width: 19vw;
-    height: 150vh;
-    justify-content: space-between;
-  }
-}
-
-html body header ul li .secList {
-  padding: 0;
-  width: 12vw;
-  height: 12vw;
-}
-
-@media (min-width: 1025px) {
-  html body header ul li .secList {
-    width: 8vw;
-    height: 8vw;
-  }
-}
-
-html body header ul li .secList img {
-  width: 12vw;
-  height: 12vw;
-}
-
-@media (min-width: 1025px) {
-  html body header ul li .secList img {
-    width: 8vw;
-    height: 8vw;
-  }
-}
-
-html body header ul li .active {
-  opacity: 0.5;
-}
-
-html body header .black-list {
+  justify-content: space-between;
+  align-items: flex-end;
   position: fixed;
   top: 0;
   left: 0;
+}
+
+@media (min-width: 1025px) {
+  html body .header {
+    height: 5vw;
+  }
+}
+
+html body .header .header_left {
+  height: 10vw;
+}
+
+@media (min-width: 1025px) {
+  html body .header .header_left {
+    height: 5vw;
+  }
+}
+
+html body .header .header_right {
+  display: flex;
+}
+
+html body .header .header_right .cart {
+  height: 8vw;
+}
+
+@media (min-width: 1025px) {
+  html body .header .header_right .cart {
+    display: none;
+  }
+}
+
+html body .header .header_right .cart_pc {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  html body .header .header_right .cart_pc {
+    display: block;
+    height: 4vw;
+  }
 }
 
 html body main {
-  width: 80vw;
-  height: 100vh;
+  width: 100vw;
+  height: calc(100vh - 10vw);
   position: fixed;
-  top: 0;
-  left: 20vw;
+  top: 10vw;
+  left: 0;
   /*
       .btn {
         padding: 8px 24px;
@@ -126,14 +105,239 @@ html body main {
         }
     
       } //btn
-      へこむボタン*/
+     へこむボタン*/
 }
 
 @media (min-width: 1025px) {
   html body main {
-    width: 70vw;
-    left: 30vw;
+    height: calc(100vh - 5vw);
+    top: 5vw;
   }
+}
+
+html body main .secList {
+  width: 14vw;
+  height: 12vw;
+  z-index: 9000;
+}
+
+@media (min-width: 1025px) {
+  html body main .secList {
+    width: 8vw;
+    height: 6.7vw;
+  }
+}
+
+html body main .secList img {
+  width: 14vw;
+  height: 12vw;
+}
+
+@media (min-width: 1025px) {
+  html body main .secList img {
+    width: 8vw;
+    height: 6.7vw;
+  }
+}
+
+html body main .secList1 {
+  position: fixed;
+  top: 14vw;
+  bottom: auto;
+  right: auto;
+  left: 8vw;
+}
+
+@media (min-width: 1025px) {
+  html body main .secList1 {
+    position: fixed;
+    top: 8vw;
+    bottom: auto;
+    right: auto;
+    left: 6vw;
+  }
+}
+
+html body main .secList2 {
+  position: fixed;
+  top: 28vw;
+  bottom: auto;
+  right: auto;
+  left: 8vw;
+}
+
+@media (min-width: 1025px) {
+  html body main .secList2 {
+    position: fixed;
+    top: 15.5vw;
+    bottom: auto;
+    right: auto;
+    left: 6vw;
+  }
+}
+
+html body main .secList3 {
+  position: fixed;
+  top: 42vw;
+  bottom: auto;
+  right: auto;
+  left: 8vw;
+}
+
+@media (min-width: 1025px) {
+  html body main .secList3 {
+    position: fixed;
+    top: 23vw;
+    bottom: auto;
+    right: auto;
+    left: 6vw;
+  }
+}
+
+html body main .secList4 {
+  position: fixed;
+  top: 22.5vw;
+  bottom: auto;
+  right: auto;
+  left: 23vw;
+}
+
+@media (min-width: 1025px) {
+  html body main .secList4 {
+    position: fixed;
+    top: 11.7vw;
+    bottom: auto;
+    right: auto;
+    left: 13vw;
+  }
+}
+
+html body main .secList5 {
+  position: fixed;
+  top: 14vw;
+  bottom: auto;
+  left: 37.5vw;
+  right: auto;
+}
+
+@media (min-width: 1025px) {
+  html body main .secList5 {
+    position: fixed;
+    top: 8vw;
+    bottom: auto;
+    right: 19vw;
+    left: auto;
+  }
+}
+
+html body main .secList6 {
+  position: fixed;
+  top: auto;
+  bottom: 28vw;
+  right: 16vw;
+  left: auto;
+}
+
+@media (min-width: 1025px) {
+  html body main .secList6 {
+    position: fixed;
+    top: auto;
+    bottom: 15.5vw;
+    right: 6vw;
+    left: auto;
+  }
+}
+
+html body main .secList7 {
+  position: fixed;
+  top: auto;
+  bottom: 14vw;
+  right: 16vw;
+  left: auto;
+}
+
+@media (min-width: 1025px) {
+  html body main .secList7 {
+    position: fixed;
+    top: auto;
+    bottom: 8vw;
+    right: 6vw;
+    left: auto;
+  }
+}
+
+html body main .secList8 {
+  position: fixed;
+  top: auto;
+  bottom: 5vw;
+  right: 30vw;
+  left: auto;
+}
+
+@media (min-width: 1025px) {
+  html body main .secList8 {
+    position: fixed;
+    top: auto;
+    bottom: 3.5vw;
+    right: 13vw;
+    left: auto;
+  }
+}
+
+html body main .secList9 {
+  position: fixed;
+  top: auto;
+  bottom: 12vw;
+  right: 43vw;
+  left: auto;
+}
+
+@media (min-width: 1025px) {
+  html body main .secList9 {
+    position: fixed;
+    top: 12vw;
+    bottom: auto;
+    right: 12.5vw;
+    left: auto;
+  }
+}
+
+html body main .secList10 {
+  position: fixed;
+  top: auto;
+  bottom: 5vw;
+  right: 56vw;
+  left: auto;
+}
+
+@media (min-width: 1025px) {
+  html body main .secList10 {
+    position: fixed;
+    top: 8vw;
+    bottom: auto;
+    right: 6vw;
+    left: auto;
+  }
+}
+
+html body main .instagram {
+  position: fixed;
+  top: 10vw;
+  right: 0;
+  z-index: 98;
+}
+
+@media (min-width: 1025px) {
+  html body main .instagram {
+    top: 5vw;
+  }
+}
+
+html body main .line {
+  position: fixed;
+  bottom: 5vw;
+  right: 1vw;
+  z-index: 98;
 }
 
 html body main .section {
@@ -141,19 +345,13 @@ html body main .section {
 }
 
 html body main .section .model-viewer {
-  width: 85vw;
+  width: 100vw;
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-@media (min-width: 1025px) {
-  html body main .section .model-viewer {
-    width: 70vw;
-  }
-}
-
-html body main .section ​ .model-viewer-btn {
+html body main .section .model-viewer ​ .model-viewer-btn {
   position: absolute;
   right: 16px;
   bottom: 10px;
