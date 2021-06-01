@@ -320,19 +320,6 @@ html body main .secList10 {
   }
 }
 
-html body main .instagram {
-  position: fixed;
-  top: 10vw;
-  right: 0;
-  z-index: 98;
-}
-
-@media (min-width: 1025px) {
-  html body main .instagram {
-    top: 5vw;
-  }
-}
-
 html body main .line {
   position: fixed;
   bottom: 5vw;
